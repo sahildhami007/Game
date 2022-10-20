@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random_no selector</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body class="container" style="background-color: #d2dbdd;">
+
+    <div class="body-area mt-5">
+
+        <button id="play" onclick="play()" class="btn btn-dark">Tap to Start Game</button>
+
+        <div id="section1" class="text-center" style="display: none;">
+            <h2>Select your numbers</h2>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h1 id="counter"></h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="attempts text-left">
+                        <h6>Remaining chances to get lucky number: <span id="attempt" class="text-danger"></span> </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section2" class="text-center" style="display: none;">
+            <button onclick="select()" style="width: 160px; height: 50px;"
+                class="btn btn-lg btn-primary ">Select</button>
+
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form id="form">
+                        <div class="form-group">
+                            <input type="text" id="num1" placeholder="1st value" readonly>
+                            <input type="text" id="num2" placeholder="2nd value" readonly>
+                            <input type="text" id="num3" placeholder="3rd value" readonly>
+                            <input type="text" id="num4" placeholder="4th value" readonly>
+                            <input type="text" id="num5" placeholder="5th value" readonly>
+                            <input type="text" id="num6" placeholder="6th value" readonly>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <div id="section3" class="text-center" style="display: none;">
+            <img src="gameover.gif" height="250" width="250" alt="game over"><br><br>
+
+            <a id="play" onclick="playAgain()" class="btn btn-dark">Play again</a>
+
+        </div>
+    </div>
+
+
+    <script src="game.js"></script>
+</body>
+
+</html>
