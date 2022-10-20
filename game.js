@@ -8,6 +8,7 @@ let inputValues = [];
 let newNumber;
 let timer;
 let i = 15;
+let totalCount;
 
 function play() {
     document.querySelector('#section1').style.display = 'block';
@@ -33,12 +34,14 @@ function startCount() {
         if (i < 0) {
             clearInterval(timer);
             console.log('interval cleared');
+            totalCount = 14 - i;
+            console.log("totalCount is: " + totalCount);
             document.querySelector('#section1').style.display = 'none';
             document.querySelector('#section2').style.display = 'none';
             document.querySelector('#section3').style.display = 'block';
             storeValues();
         }
-    }, 1000);
+    }, 500);
 }
 
 function select() {
@@ -57,6 +60,8 @@ function select() {
 
         clearInterval(timer);
         console.log('interval cleared');
+        totalCount = 14 - i;
+        console.log("totalCount is: " + totalCount);
         setTimeout(() => {
             document.querySelector('#section1').style.display = 'none';
             document.querySelector('#section2').style.display = 'none';
@@ -71,6 +76,7 @@ function storeValues() {
     for (var s = 0; s < inputs.length; s++) {
         inputValues.push(inputs[s].value);
     }
+    inputValues.push("count: " + totalCount );
     console.log(inputValues);
 }
 
