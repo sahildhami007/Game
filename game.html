@@ -14,14 +14,17 @@
 
     <div class="body-area mt-5">
 
-        <button id="play" onclick="play()" class="btn btn-dark">Tap to Start Game</button>
+        <div class="text-center">
+            <a id="play" onclick="play()" class="btn btn-dark">Tap to Start Game</a>
+        </div>
 
         <div id="section1" class="text-center" style="display: none;">
             <h2>Select your numbers</h2>
+
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <h1 id="counter"></h1>
+                    <h1 id="counter" style="display: none;"></h1>
                 </div>
                 <div class="col-md-4">
                     <div class="attempts text-left">
@@ -32,13 +35,13 @@
         </div>
 
         <div id="section2" class="text-center" style="display: none;">
-            <button onclick="select()" style="width: 160px; height: 50px;"
-                class="btn btn-lg btn-primary ">Select</button>
+            <button id="select-btn" disabled="true" onclick="select()" style=" width: 160px; height: 50px;"
+                class="btn btn-lg btn-primary text-center">Select</button>
 
             <div class="row mt-3">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <form id="form">
+                    <form id="form1">
                         <div class="form-group">
                             <input type="text" id="num1" placeholder="1st value" readonly>
                             <input type="text" id="num2" placeholder="2nd value" readonly>
@@ -56,9 +59,10 @@
         <div id="section3" class="text-center" style="display: none;">
             <img src="gameover.gif" height="250" width="250" alt="game over"><br><br>
 
-            <a id="play" onclick="playAgain()" class="btn btn-dark">Play again</a>
+            <a id="play" onclick="play()" class="btn btn-dark">Play again</a>
 
         </div>
+
     </div>
 
 
